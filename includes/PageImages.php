@@ -249,6 +249,7 @@ class PageImages {
 	 * @param Skin &$skin Skin object used to generate the page. Ignored
 	 */
 	public static function onBeforePageDisplay( OutputPage &$out, Skin &$skin ) {
+		return true;
 		$imageFile = self::getPageImage( $out->getContext()->getTitle() );
 		if ( !$imageFile ) {
 			return;
