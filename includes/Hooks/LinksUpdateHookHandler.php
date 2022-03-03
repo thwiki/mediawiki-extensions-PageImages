@@ -165,7 +165,7 @@ class LinksUpdateHookHandler {
 			$score = -1000;
 		}
 
-		if ( class_exists( '\\MediaContentRating' ) && !empty( \MediaContentRating::getContentRating( wfFindFile( $image['filename'] ) ) ) ) {
+		if ( class_exists( '\\MediaContentRatingHooks' ) && !empty( \MediaContentRatingHooks::getContentRating( wfFindFile( $image['filename'] ) ) ) ) {
 			$score = -1000;
 		}
 
