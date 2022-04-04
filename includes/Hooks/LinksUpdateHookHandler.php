@@ -165,7 +165,7 @@ class LinksUpdateHookHandler {
 			$score = -1000;
 		}
 
-		Hooks::run( 'PageImages::getScore', [ $image, $position, &$score ] );
+		\Hooks::run( 'PageImages::getScore', [ $image, $position, &$score ] );
 
 		return $score;
 	}
