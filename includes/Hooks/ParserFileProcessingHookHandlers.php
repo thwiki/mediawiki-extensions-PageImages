@@ -17,6 +17,7 @@ use Parser;
 use ParserOutput;
 use RuntimeException;
 use Title;
+use Hooks;
 
 /**
  * Handlers for parser hooks.
@@ -336,6 +337,8 @@ class ParserFileProcessingHookHandlers implements
 		if ( isset( $denylist[$image->getFileName()] ) ) {
 			$score = -1000;
 		}
+
+		Hooks::run( 'PageImages::getScore', [ $image, $position, &$score ] );
 
 		return $score;
 	}
