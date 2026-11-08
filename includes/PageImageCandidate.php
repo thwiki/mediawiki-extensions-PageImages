@@ -2,6 +2,7 @@
 
 namespace PageImages;
 
+use MediaWiki\Parser\Parser;
 use JsonSerializable;
 use MediaWiki\FileRepo\File\File;
 

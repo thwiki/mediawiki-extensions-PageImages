@@ -5,7 +5,7 @@ use PageImages\PageImages;
 
 /** @phpcs-require-sorted-array */
 return [
-	'PageImages.PageImages' => static function ( MediaWikiServices $services ): PageImages {
+	'PageImages.PageImages' => static function ( \MediaWiki\MediaWikiServices $services ): PageImages {
 		return new PageImages(
 			$services->getMainConfig(),
 			$services->getDBLoadBalancerFactory(),
